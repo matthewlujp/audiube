@@ -33,7 +33,7 @@ type impleVideoClient struct {
 }
 
 // DefaultVideoClient is the only instance exported as a implementation of VideoClient interface
-var DefaultVideoClient = &impleVideoClient{client: DefaultClient}
+var DefaultVideoClient = &impleVideoClient{client: &impleClient{client: &http.Client{}}}
 
 func init() {
 	// YouTube Data v3 API key is searched from environmental variable.
