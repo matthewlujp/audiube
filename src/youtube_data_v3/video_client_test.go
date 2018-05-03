@@ -17,6 +17,7 @@ const (
 	searchDetailsJSONPath  = "./mocks/data/search_details.json"
 	relatedResultJSONPath  = "./mocks/data/related_result.json"
 	relatedDetailsJSONPath = "./mocks/data/related_details.json"
+	videoJSONPath          = "./mocks/data/video.json"
 )
 
 func TestSearch(t *testing.T) {
@@ -131,6 +132,55 @@ func TestRelated(t *testing.T) {
 					t.Errorf("id=%s: thumbnails expected %v, got %v ", v.ID, expectedThumbnails, v.Thumbnails)
 				}
 			}
+		}
+	}
+
+}
+func TestGet(t *testing.T) {
+	ctrl := gomock.NewController(t)
+	defer ctrl.Finish()
+	c := mock.NewMockClient(ctrl)
+
+	apiKey := "foobar"
+	// request for a video info
+	req, errReq := http.NewRequest("GET", fmt.Sprintf(videoInfoURL, "lhu8HWc9TlA", apiKey), nil)
+	if errReq != nil {
+		t.Fatal(errReq)
+	}
+	c.EXPECT().Do(req).Return(returnFileAsResponse(videoJSONPath))
+
+	DefaultVideoClient.apiKey = apiKey
+	DefaultVideoClient.client = c
+
+	// check result
+	if v, err := DefaultVideoClient.Get("lhu8HWc9TlA"); err != nil {
+		t.Errorf("related failed, %s", err)
+	} else {
+		// check video info details for id = lhu8HWc9TlA
+		if v.ID != "lhu8HWc9TlA" {
+			t.Errorf("wrong video id, expected %s, got %s", "lhu8HWc9TlA", v.ID)
+		}
+		if v.Title != "Violet Evergarden - COMPLETE ALBUM - [ ヴァイオレット・エヴァーガーデン ] [BGM]" {
+			t.Errorf("id=%s: title expected %s, got %s ", "lhu8HWc9TlA", "Violet Evergarden - COMPLETE ALBUM - [ ヴァイオレット・エヴァーガーデン ] [BGM]", v.Title)
+		}
+		if v.Duration != time.Hour*1+time.Minute*46+time.Second*52 {
+			t.Errorf("id=%s: duration expected %s, got %s ", "lhu8HWc9TlA", time.Hour*1+time.Minute*46+time.Second*52, v.Duration)
+		}
+		if v.ViewCount != 9244 {
+			t.Errorf("id=%s: view count expected %d, got %d ", "lhu8HWc9TlA", 9244, v.ViewCount)
+		}
+		if v.PublishDate != "2018-03-28" {
+			t.Errorf("id=%s: publish date expected %s, got %s ", "lhu8HWc9TlA", "2018-03-28", v.PublishDate)
+		}
+		expectedThumbnails := Thumbnails{
+			Default:  ThumbnailDetail{URL: "https://i.ytimg.com/vi/lhu8HWc9TlA/default.jpg", Width: 120, Height: 90},
+			Medium:   ThumbnailDetail{URL: "https://i.ytimg.com/vi/lhu8HWc9TlA/mqdefault.jpg", Width: 320, Height: 180},
+			High:     ThumbnailDetail{URL: "https://i.ytimg.com/vi/lhu8HWc9TlA/hqdefault.jpg", Width: 480, Height: 360},
+			Standard: ThumbnailDetail{URL: "https://i.ytimg.com/vi/lhu8HWc9TlA/sddefault.jpg", Width: 640, Height: 480},
+			Maxres:   ThumbnailDetail{},
+		}
+		if !reflect.DeepEqual(v.Thumbnails, expectedThumbnails) {
+			t.Errorf("id=%s: thumbnails expected %v, got %v ", v.ID, expectedThumbnails, v.Thumbnails)
 		}
 	}
 

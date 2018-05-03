@@ -1,7 +1,6 @@
 package youtube
 
 import (
-	"errors"
 	"fmt"
 	"log"
 	"net/http"
@@ -142,9 +141,32 @@ func (c *impleVideoClient) Related(searchID string, maxResults int) ([]Video, er
 
 	// extract necessary data from returned json
 	return parseVideosDetails(res.Body)
-
 }
 
-func (c *impleVideoClient) Get(id string) (*Video, error) {
-	return nil, errors.New("not implemented")
+// Get retrieve detailed info of a given video id.
+// The method takes video id and return a Video instance.
+func (c *impleVideoClient) Get(videoID string) (*Video, error) {
+	reqURL := fmt.Sprintf(videoInfoURL, videoID, c.apiKey)
+	req, errBuildReq := http.NewRequest("GET", reqURL, nil)
+	if errBuildReq != nil {
+		return nil, fmt.Errorf("failed in retrieving detailed video info, %s", errBuildReq)
+	}
+	// GET request to YouTube Data v3 API
+	res, errReq := c.client.Do(req)
+	if errReq != nil {
+		return nil, fmt.Errorf("failed in retrieving detailed video info, %s", errReq)
+	}
+	defer res.Body.Close()
+	if res.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("response for %s got status %s", reqURL, res.Status)
+	}
+
+	// extract necessary data from returned json
+	videos, errExtract := parseVideosDetails(res.Body)
+	if errExtract != nil {
+		return nil, fmt.Errorf("failed in retreiving detailed video info, %s", errExtract)
+	} else if videos == nil || len(videos) == 0 {
+		return nil, fmt.Errorf("no video info is retrieved")
+	}
+	return &videos[0], nil
 }

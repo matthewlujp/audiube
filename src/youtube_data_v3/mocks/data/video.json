@@ -1,0 +1,82 @@
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "\"YuGNqL8VyJA_7QVzAZ4GTyhUvgs/o8SplkjgtnYEYJ5FzjnH2RKg2vs\"",
+ "pageInfo": {
+  "totalResults": 1,
+  "resultsPerPage": 1
+ },
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "\"YuGNqL8VyJA_7QVzAZ4GTyhUvgs/_M0w2wceaIcNDEcZrhkpXfkHm-4\"",
+   "id": "lhu8HWc9TlA",
+   "snippet": {
+    "publishedAt": "2018-03-28T21:31:35.000Z",
+    "channelId": "UCWE34r3QAzuKbxsLqwqEDeg",
+    "title": "Violet Evergarden - COMPLETE ALBUM - [ ヴァイオレット・エヴァーガーデン ] [BGM]",
+    "description": "★ Composer :  Evan Call, Horie Shota, Kawasaki Satomi, Kikuta Daisuke , Masuda Takeshi\n\n★ Music : \n\n0:00 : Main theme \n2:17 : A Doll's Beginning\n5:00 : One Last Message\n8:11 : Unspoken Words\n10:58 : A Simple Mission\n13:15 : Another Sunny Day\n15:23 : The Voice in My Heart\n17:44 : Rust\n20:35 : In Remembrance\n23:17 :Ink to Paper\n25:25 : The Birth of a Legend \n27:38 : To The Ends of Our World\n30:19 : Back in Business\n32:22 : A Place to Call Home\n34:34 : An Admirable Doll\n36:45 : Those Words You Spoke to Me\n38:59 : Strangeling\n41:11 : A Bit of Sass\n43:21: Each Memory a Message\n45:29 : The Long Night\n48:19 : Violet Snow for Orchestra\n51:12 : Across the Violet Sky\n53:57 : Wherever You Are, Wherever You May Be\n56:23 : Never Coming Back\n58:47 : Adamantine Dreams\n1:01:57 : The Ultimate Price\n1:04:57 : Inconsolable\n1:07:35 : The Love That Binds Us\n1:11:31 : Devoid of Hope\n1:14:00 : Torment\n1:16:02 : Fractured Heart\n1:18:32 : Innocence\n1:20:35 : Always Watching Over You\n1:22:59 : Torn Apart at the Seams\n1:25:04 : Intertwined Fates\n1:27:07 : The Stench of Fear and Hatred\n1:28:53 : The Songstress Aria (Instrumental)\n1:29:58 : The Storm\n1:32:10 : Letters From Heaven\n1:34:34 : What It Means To Love\n1:36:28 : Violet's Letter\n1:38:41 : Sincerely (Short Size)\n1:40:16 : Michishirube みちしるべ (Short Size\n1:41:48 : Believe in… (Short Size)\n1:43:34 : Violet Snow (Short size)\n1:44:06 : The Songstress Aria\n1:45:13 : Letter (Short Size)\n\n★ Credits : X\n\n★ Album :http://www.cdjapan.co.jp/product/LACA-9573\n★ Détails : https://fr.wikipedia.org/wiki/Violet_Evergarden\n★ Wallpaper : https://wall.alphacoders.com/?lang=french\n\n★ Good Listening :D ♪♫\n★ Support original work ♥",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Maelka",
+    "tags": [
+     "ヴァイオレット・エヴァーガーデン",
+     "violet evergarden ost",
+     "violet ost",
+     "violet evegarden ost",
+     "soundtracks",
+     "maelka",
+     "violet evergarden opening",
+     "violet evergarden",
+     "violet evergarden ending",
+     "violet evergarden amv",
+     "violet evergarden anime",
+     "violet",
+     "anime soudntracks",
+     "sad ost",
+     "epic ost"
+    ],
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Violet Evergarden - COMPLETE ALBUM - [ ヴァイオレット・エヴァーガーデン ] [BGM]",
+     "description": "★ Composer :  Evan Call, Horie Shota, Kawasaki Satomi, Kikuta Daisuke , Masuda Takeshi\n\n★ Music : \n\n0:00 : Main theme \n2:17 : A Doll's Beginning\n5:00 : One Last Message\n8:11 : Unspoken Words\n10:58 : A Simple Mission\n13:15 : Another Sunny Day\n15:23 : The Voice in My Heart\n17:44 : Rust\n20:35 : In Remembrance\n23:17 :Ink to Paper\n25:25 : The Birth of a Legend \n27:38 : To The Ends of Our World\n30:19 : Back in Business\n32:22 : A Place to Call Home\n34:34 : An Admirable Doll\n36:45 : Those Words You Spoke to Me\n38:59 : Strangeling\n41:11 : A Bit of Sass\n43:21: Each Memory a Message\n45:29 : The Long Night\n48:19 : Violet Snow for Orchestra\n51:12 : Across the Violet Sky\n53:57 : Wherever You Are, Wherever You May Be\n56:23 : Never Coming Back\n58:47 : Adamantine Dreams\n1:01:57 : The Ultimate Price\n1:04:57 : Inconsolable\n1:07:35 : The Love That Binds Us\n1:11:31 : Devoid of Hope\n1:14:00 : Torment\n1:16:02 : Fractured Heart\n1:18:32 : Innocence\n1:20:35 : Always Watching Over You\n1:22:59 : Torn Apart at the Seams\n1:25:04 : Intertwined Fates\n1:27:07 : The Stench of Fear and Hatred\n1:28:53 : The Songstress Aria (Instrumental)\n1:29:58 : The Storm\n1:32:10 : Letters From Heaven\n1:34:34 : What It Means To Love\n1:36:28 : Violet's Letter\n1:38:41 : Sincerely (Short Size)\n1:40:16 : Michishirube みちしるべ (Short Size\n1:41:48 : Believe in… (Short Size)\n1:43:34 : Violet Snow (Short size)\n1:44:06 : The Songstress Aria\n1:45:13 : Letter (Short Size)\n\n★ Credits : X\n\n★ Album :http://www.cdjapan.co.jp/product/LACA-9573\n★ Détails : https://fr.wikipedia.org/wiki/Violet_Evergarden\n★ Wallpaper : https://wall.alphacoders.com/?lang=french\n\n★ Good Listening :D ♪♫\n★ Support original work ♥"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H46M52S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "projection": "rectangular"
+   },
+   "statistics": {
+    "viewCount": "9244",
+    "likeCount": "154",
+    "dislikeCount": "1",
+    "favoriteCount": "0",
+    "commentCount": "11"
+   }
+  }
+ ]
+}
