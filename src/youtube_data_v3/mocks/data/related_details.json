@@ -1,0 +1,249 @@
+{
+ "kind": "youtube#videoListResponse",
+ "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/udphWGp-PKdMJfqA6IboOQiFftc\"",
+ "pageInfo": {
+  "totalResults": 3,
+  "resultsPerPage": 3
+ },
+ "items": [
+  {
+   "kind": "youtube#video",
+   "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/Nk68M9VDNyS8UYSU6jZm8BS7HAE\"",
+   "id": "lhu8HWc9TlA",
+   "snippet": {
+    "publishedAt": "2018-03-28T21:31:35.000Z",
+    "channelId": "UCWE34r3QAzuKbxsLqwqEDeg",
+    "title": "Violet Evergarden - COMPLETE ALBUM - [ ヴァイオレット・エヴァーガーデン ] [BGM]",
+    "description": "★ Composer :  Evan Call, Horie Shota, Kawasaki Satomi, Kikuta Daisuke , Masuda Takeshi\n\n★ Music : \n\n0:00 : Main theme \n2:17 : A Doll's Beginning\n5:00 : One Last Message\n8:11 : Unspoken Words\n10:58 : A Simple Mission\n13:15 : Another Sunny Day\n15:23 : The Voice in My Heart\n17:44 : Rust\n20:35 : In Remembrance\n23:17 :Ink to Paper\n25:25 : The Birth of a Legend \n27:38 : To The Ends of Our World\n30:19 : Back in Business\n32:22 : A Place to Call Home\n34:34 : An Admirable Doll\n36:45 : Those Words You Spoke to Me\n38:59 : Strangeling\n41:11 : A Bit of Sass\n43:21: Each Memory a Message\n45:29 : The Long Night\n48:19 : Violet Snow for Orchestra\n51:12 : Across the Violet Sky\n53:57 : Wherever You Are, Wherever You May Be\n56:23 : Never Coming Back\n58:47 : Adamantine Dreams\n1:01:57 : The Ultimate Price\n1:04:57 : Inconsolable\n1:07:35 : The Love That Binds Us\n1:11:31 : Devoid of Hope\n1:14:00 : Torment\n1:16:02 : Fractured Heart\n1:18:32 : Innocence\n1:20:35 : Always Watching Over You\n1:22:59 : Torn Apart at the Seams\n1:25:04 : Intertwined Fates\n1:27:07 : The Stench of Fear and Hatred\n1:28:53 : The Songstress Aria (Instrumental)\n1:29:58 : The Storm\n1:32:10 : Letters From Heaven\n1:34:34 : What It Means To Love\n1:36:28 : Violet's Letter\n1:38:41 : Sincerely (Short Size)\n1:40:16 : Michishirube みちしるべ (Short Size\n1:41:48 : Believe in… (Short Size)\n1:43:34 : Violet Snow (Short size)\n1:44:06 : The Songstress Aria\n1:45:13 : Letter (Short Size)\n\n★ Credits : X\n\n★ Album :http://www.cdjapan.co.jp/product/LACA-9573\n★ Détails : https://fr.wikipedia.org/wiki/Violet_Evergarden\n★ Wallpaper : https://wall.alphacoders.com/?lang=french\n\n★ Good Listening :D ♪♫\n★ Support original work ♥",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/lhu8HWc9TlA/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Maelka",
+    "tags": [
+     "ヴァイオレット・エヴァーガーデン",
+     "violet evergarden ost",
+     "violet ost",
+     "violet evegarden ost",
+     "soundtracks",
+     "maelka",
+     "violet evergarden opening",
+     "violet evergarden",
+     "violet evergarden ending",
+     "violet evergarden amv",
+     "violet evergarden anime",
+     "violet",
+     "anime soudntracks",
+     "sad ost",
+     "epic ost"
+    ],
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Violet Evergarden - COMPLETE ALBUM - [ ヴァイオレット・エヴァーガーデン ] [BGM]",
+     "description": "★ Composer :  Evan Call, Horie Shota, Kawasaki Satomi, Kikuta Daisuke , Masuda Takeshi\n\n★ Music : \n\n0:00 : Main theme \n2:17 : A Doll's Beginning\n5:00 : One Last Message\n8:11 : Unspoken Words\n10:58 : A Simple Mission\n13:15 : Another Sunny Day\n15:23 : The Voice in My Heart\n17:44 : Rust\n20:35 : In Remembrance\n23:17 :Ink to Paper\n25:25 : The Birth of a Legend \n27:38 : To The Ends of Our World\n30:19 : Back in Business\n32:22 : A Place to Call Home\n34:34 : An Admirable Doll\n36:45 : Those Words You Spoke to Me\n38:59 : Strangeling\n41:11 : A Bit of Sass\n43:21: Each Memory a Message\n45:29 : The Long Night\n48:19 : Violet Snow for Orchestra\n51:12 : Across the Violet Sky\n53:57 : Wherever You Are, Wherever You May Be\n56:23 : Never Coming Back\n58:47 : Adamantine Dreams\n1:01:57 : The Ultimate Price\n1:04:57 : Inconsolable\n1:07:35 : The Love That Binds Us\n1:11:31 : Devoid of Hope\n1:14:00 : Torment\n1:16:02 : Fractured Heart\n1:18:32 : Innocence\n1:20:35 : Always Watching Over You\n1:22:59 : Torn Apart at the Seams\n1:25:04 : Intertwined Fates\n1:27:07 : The Stench of Fear and Hatred\n1:28:53 : The Songstress Aria (Instrumental)\n1:29:58 : The Storm\n1:32:10 : Letters From Heaven\n1:34:34 : What It Means To Love\n1:36:28 : Violet's Letter\n1:38:41 : Sincerely (Short Size)\n1:40:16 : Michishirube みちしるべ (Short Size\n1:41:48 : Believe in… (Short Size)\n1:43:34 : Violet Snow (Short size)\n1:44:06 : The Songstress Aria\n1:45:13 : Letter (Short Size)\n\n★ Credits : X\n\n★ Album :http://www.cdjapan.co.jp/product/LACA-9573\n★ Détails : https://fr.wikipedia.org/wiki/Violet_Evergarden\n★ Wallpaper : https://wall.alphacoders.com/?lang=french\n\n★ Good Listening :D ♪♫\n★ Support original work ♥"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H46M52S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "projection": "rectangular"
+   },
+   "statistics": {
+    "viewCount": "9195",
+    "likeCount": "154",
+    "dislikeCount": "1",
+    "favoriteCount": "0",
+    "commentCount": "11"
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/_ARxB8UrfJV6rjdcAkVSE-SrpoY\"",
+   "id": "mc7GUZinTD0",
+   "snippet": {
+    "publishedAt": "2018-01-26T00:22:05.000Z",
+    "channelId": "UCMqDJcXYB0eOT_CR2bkIOCA",
+    "title": "KUJIRA NO KORA WA SAJOU NI UTAU OST:KIROKU ~RECORD~ [DISC 1-2]-FULL OST/CHILDREN OF THE WHALES OST",
+    "description": "Free Download, Original Soundtrack: \nMEGA: http://velociterium.com/2LYC\nDRIVE: http://velociterium.com/2LVv\n\nDerechos de autor (Música): Composer: Hiroaki Tsutsumi, RIRIKO, rionos\nLyrics: Abi Umeda, RIRIKO, rionos\nEdición de video: SEIMODO\nBUY THE ORIGINAL TO SUPPORT THE ARTIST\nhttp://www.cdjapan.co.jp/product/LACA-9569\n\nTRACKLIST:\n\nDISC 1\n\nTrack 01 [ 0:00:00 ] - 心の唄 -PV ver-\nTrack 02 [ 0:02:58 ] - その未来へ (TVsize)\nTrack 03 [ 0:04:27 ] - ハイパーグラフィア\nTrack 04 [ 0:06:20 ] - 楽園\nTrack 05 [ 0:08:44 ] - 砂の戯れ\nTrack 06 [ 0:10:57 ] - 無印の長\nTrack 07 [ 0:13:09 ] - 指組み\nTrack 08 [ 0:15:22 ] - アパトイア\nTrack 09 [ 0:17:04 ] - 濡烏\nTrack 10 [ 0:19:10 ] - 魂形-情-\nTrack 11 [ 0:20:43 ] - 砂上の虹\nTrack 12 [ 0:22:36 ] - 若芽色の弦\nTrack 13 [ 0:24:50 ] - 砂色の弦\nTrack 14 [ 0:26:38 ] - 心との再会\nTrack 15 [ 0:28:29 ] - 飛蝗の夜\nTrack 16 [ 0:30:35 ] - 泥クジラの過去\nTrack 17 [ 0:32:44 ] - スナモドリ\nTrack 18 [ 0:34:47 ] - ウラバヤナギ\nTrack 19 [ 0:36:37 ] - ファレナの双子\nTrack 20 [ 0:38:26 ] - 不穏な予感\nTrack 21 [ 0:40:43 ] - 逸れた闇\nTrack 22 [ 0:43:05 ] - 砂葬曲\nTrack 23 [ 0:45:25 ] - 砂塵の檻\nTrack 24 [ 0:47:27 ] - 惨劇の鐘\nTrack 25 [ 0:49:36 ] - 無情の咆哮\nTrack 26 [ 0:51:54 ] - サイミア\nTrack 27 [ 0:54:27 ] - 白縹の唄\nTrack 28 [ 0:57:18 ] - その未来へ -Guitar ver-\n\nDISC 2\n\nTrack 01 [ 0:59:26 ] - 光の唄\nTrack 02 [ 1:01:20 ] - 流刑の民の選択 -Quartet ver-\nTrack 03 [ 1:04:16 ] - 砂塵の檻 -Emotional Cello ver-\nTrack 04 [ 1:06:18 ] - 襲撃前夜\nTrack 05 [ 1:08:38 ] - 砂嵐の対峙\nTrack 06 [ 1:10:50 ] - スキロスの侵略\nTrack 07 [ 1:12:49 ] - 物語る異端者\nTrack 08 [ 1:14:59 ] - 死神の行列\nTrack 09 [ 1:16:58 ] - 道化の獅子\nTrack 10 [ 1:19:01 ] - 狂気の2人\nTrack 11 [ 1:21:36 ] - 銀灰色の弦\nTrack 12 [ 1:23:52 ] - ハシタイロ -Piano ver-\nTrack 13 [ 1:26:18 ] - 異国の主\nTrack 14 [ 1:28:00 ] - 新たなる鍵\nTrack 15 [ 1:30:47 ] - 秘色の唄\nTrack 16 [ 1:33:16 ] - 流刑の民の選択\nTrack 17 [ 1:37:19 ] - 引き剥がされた楽園\nTrack 18 [ 1:39:44 ] - 魂形-命-\nTrack 19 [ 1:42:06 ] - ファレナの悪霊\nTrack 20 [ 1:44:22 ] - 鯨の戦塵\nTrack 21 [ 1:47:43 ] - 煌めく命\nTrack 22 [ 1:51:14 ] - 希望の船出\nTrack 23 [ 1:54:22 ] - 心の唄 -TV track ver-\nTrack 24 [ 1:57:23 ] - ハシタイロ (TVsize)\n\nFurther information on:\nhttps://vgmdb.net/album/72692\n\nCopyright Info:\nBe aware this video is only for promotion purposes.\nAll creations belongs to the original creators.\n\nPágina de Facebook [SEIMODO]:https://www.facebook.com/pages/Seimodo/1390738541168388\nPágina de Dailymotion [SEIMODO]:http://www.dailymotion.com/Seimodo\nPágina de Youtube [SEIMODO18]:https://www.youtube.com/channel/UCfT4HKz0jLjqT5GSMIIvCkA\nPara más Videomangas visita:https://www.facebook.com/LegacyMangaOficial",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/mc7GUZinTD0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/mc7GUZinTD0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/mc7GUZinTD0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/mc7GUZinTD0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/mc7GUZinTD0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "SEIMODO MUSIC",
+    "tags": [
+     "KUJIRA NO KORA WA SAJOU NI UTAU OST:KIROKU ~RECORD~ [DISC 1-2]-FULL OST/CHILDREN OF THE WHALES OST",
+     "KUJIRA NO KORA WA SAJOU NI UTAU OST",
+     "CHILDREN OF THE WHALES OST",
+     "Original Soundtrack",
+     "KUJIRA NO KORA WA SAJOU NI UTAU Original Soundtrack",
+     "CHILDREN OF THE WHALES Original Soundtrack",
+     "Full Soundtrack",
+     "Full Album",
+     "Complete Ost",
+     "KUJIRA NO KORA WA SAJOU NI UTAU",
+     "CHILDREN OF THE WHALES",
+     "OST",
+     "anime ost",
+     "FULL OST",
+     "DICS 1-2",
+     "tv",
+     "Emotional Music",
+     "Epic Music",
+     "Beautiful Music"
+    ],
+    "categoryId": "10",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "KUJIRA NO KORA WA SAJOU NI UTAU OST:KIROKU ~RECORD~ [DISC 1-2]-FULL OST/CHILDREN OF THE WHALES OST",
+     "description": "Free Download, Original Soundtrack: \nMEGA: http://velociterium.com/2LYC\nDRIVE: http://velociterium.com/2LVv\n\nDerechos de autor (Música): Composer: Hiroaki Tsutsumi, RIRIKO, rionos\nLyrics: Abi Umeda, RIRIKO, rionos\nEdición de video: SEIMODO\nBUY THE ORIGINAL TO SUPPORT THE ARTIST\nhttp://www.cdjapan.co.jp/product/LACA-9569\n\nTRACKLIST:\n\nDISC 1\n\nTrack 01 [ 0:00:00 ] - 心の唄 -PV ver-\nTrack 02 [ 0:02:58 ] - その未来へ (TVsize)\nTrack 03 [ 0:04:27 ] - ハイパーグラフィア\nTrack 04 [ 0:06:20 ] - 楽園\nTrack 05 [ 0:08:44 ] - 砂の戯れ\nTrack 06 [ 0:10:57 ] - 無印の長\nTrack 07 [ 0:13:09 ] - 指組み\nTrack 08 [ 0:15:22 ] - アパトイア\nTrack 09 [ 0:17:04 ] - 濡烏\nTrack 10 [ 0:19:10 ] - 魂形-情-\nTrack 11 [ 0:20:43 ] - 砂上の虹\nTrack 12 [ 0:22:36 ] - 若芽色の弦\nTrack 13 [ 0:24:50 ] - 砂色の弦\nTrack 14 [ 0:26:38 ] - 心との再会\nTrack 15 [ 0:28:29 ] - 飛蝗の夜\nTrack 16 [ 0:30:35 ] - 泥クジラの過去\nTrack 17 [ 0:32:44 ] - スナモドリ\nTrack 18 [ 0:34:47 ] - ウラバヤナギ\nTrack 19 [ 0:36:37 ] - ファレナの双子\nTrack 20 [ 0:38:26 ] - 不穏な予感\nTrack 21 [ 0:40:43 ] - 逸れた闇\nTrack 22 [ 0:43:05 ] - 砂葬曲\nTrack 23 [ 0:45:25 ] - 砂塵の檻\nTrack 24 [ 0:47:27 ] - 惨劇の鐘\nTrack 25 [ 0:49:36 ] - 無情の咆哮\nTrack 26 [ 0:51:54 ] - サイミア\nTrack 27 [ 0:54:27 ] - 白縹の唄\nTrack 28 [ 0:57:18 ] - その未来へ -Guitar ver-\n\nDISC 2\n\nTrack 01 [ 0:59:26 ] - 光の唄\nTrack 02 [ 1:01:20 ] - 流刑の民の選択 -Quartet ver-\nTrack 03 [ 1:04:16 ] - 砂塵の檻 -Emotional Cello ver-\nTrack 04 [ 1:06:18 ] - 襲撃前夜\nTrack 05 [ 1:08:38 ] - 砂嵐の対峙\nTrack 06 [ 1:10:50 ] - スキロスの侵略\nTrack 07 [ 1:12:49 ] - 物語る異端者\nTrack 08 [ 1:14:59 ] - 死神の行列\nTrack 09 [ 1:16:58 ] - 道化の獅子\nTrack 10 [ 1:19:01 ] - 狂気の2人\nTrack 11 [ 1:21:36 ] - 銀灰色の弦\nTrack 12 [ 1:23:52 ] - ハシタイロ -Piano ver-\nTrack 13 [ 1:26:18 ] - 異国の主\nTrack 14 [ 1:28:00 ] - 新たなる鍵\nTrack 15 [ 1:30:47 ] - 秘色の唄\nTrack 16 [ 1:33:16 ] - 流刑の民の選択\nTrack 17 [ 1:37:19 ] - 引き剥がされた楽園\nTrack 18 [ 1:39:44 ] - 魂形-命-\nTrack 19 [ 1:42:06 ] - ファレナの悪霊\nTrack 20 [ 1:44:22 ] - 鯨の戦塵\nTrack 21 [ 1:47:43 ] - 煌めく命\nTrack 22 [ 1:51:14 ] - 希望の船出\nTrack 23 [ 1:54:22 ] - 心の唄 -TV track ver-\nTrack 24 [ 1:57:23 ] - ハシタイロ (TVsize)\n\nFurther information on:\nhttps://vgmdb.net/album/72692\n\nCopyright Info:\nBe aware this video is only for promotion purposes.\nAll creations belongs to the original creators.\n\nPágina de Facebook [SEIMODO]:https://www.facebook.com/pages/Seimodo/1390738541168388\nPágina de Dailymotion [SEIMODO]:http://www.dailymotion.com/Seimodo\nPágina de Youtube [SEIMODO18]:https://www.youtube.com/channel/UCfT4HKz0jLjqT5GSMIIvCkA\nPara más Videomangas visita:https://www.facebook.com/LegacyMangaOficial"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H59M1S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "projection": "rectangular"
+   },
+   "statistics": {
+    "viewCount": "59702",
+    "likeCount": "1569",
+    "dislikeCount": "11",
+    "favoriteCount": "0",
+    "commentCount": "117"
+   }
+  },
+  {
+   "kind": "youtube#video",
+   "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/xfvdoSymZOTHzjhJnhJPeZ_74gA\"",
+   "id": "6qptaGpilE0",
+   "snippet": {
+    "publishedAt": "2018-04-26T01:11:42.000Z",
+    "channelId": "UC4kIxK8F6dPswP6-ufy-aeA",
+    "title": "Piano Collections NieR:Automata - Complete Album",
+    "description": "Piano Collections NieR:Automata\nComposed by: Keiichi Okabe, Keigo Hoashi,Kuniyuki Takahashi\nAll rights belong to their respective owners.  \n\nSUPPORT THE ARTISTS:\n  Buy The Original Soundtrack: https://amzn.to/2r0ZYvl\n\nTwitter: https://twitter.com/SittingOnCloud\n\nTracklist:\n\n01. Piano: Weight of the World 00:00\n02. Piano: Amusement Park 06:19\n03. Piano: A Beautiful Song 13:13\n04. Piano: City Ruins 18:20\n05. Piano: Dependent Weakling 22:09\n06. Piano: Peaceful Sleep 26:27\n07. Piano: Copied City 31:22\n08. Piano: Voice of no Return 35:42\n09. Piano: Bipolar Nightmare 39:39\n10. Piano: The Tower 44:03\n11. Piano: The Sound of the End 49:12\n12. Piano: Vague Hope 55:14",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/6qptaGpilE0/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/6qptaGpilE0/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/6qptaGpilE0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/6qptaGpilE0/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/6qptaGpilE0/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Sitting on Clouds OST",
+    "tags": [
+     "Piano Collections NieR:Automata",
+     "Complete Album",
+     "Full",
+     "Soundtracck",
+     "OST",
+     "Music",
+     "Cover",
+     "Arrange",
+     "Official",
+     "Square",
+     "Enix",
+     "Keiichi Okabe",
+     "Keigo Hoashi",
+     "Kuniyuki Takahashi",
+     "New",
+     "2018",
+     "Of the Year",
+     "All",
+     "Buy",
+     "Sitting on Clouds",
+     "Original",
+     "BGM",
+     "Download",
+     "MP3"
+    ],
+    "categoryId": "22",
+    "liveBroadcastContent": "none",
+    "localized": {
+     "title": "Piano Collections NieR:Automata - Complete Album",
+     "description": "Piano Collections NieR:Automata\nComposed by: Keiichi Okabe, Keigo Hoashi,Kuniyuki Takahashi\nAll rights belong to their respective owners.  \n\nSUPPORT THE ARTISTS:\n  Buy The Original Soundtrack: https://amzn.to/2r0ZYvl\n\nTwitter: https://twitter.com/SittingOnCloud\n\nTracklist:\n\n01. Piano: Weight of the World 00:00\n02. Piano: Amusement Park 06:19\n03. Piano: A Beautiful Song 13:13\n04. Piano: City Ruins 18:20\n05. Piano: Dependent Weakling 22:09\n06. Piano: Peaceful Sleep 26:27\n07. Piano: Copied City 31:22\n08. Piano: Voice of no Return 35:42\n09. Piano: Bipolar Nightmare 39:39\n10. Piano: The Tower 44:03\n11. Piano: The Sound of the End 49:12\n12. Piano: Vague Hope 55:14"
+    }
+   },
+   "contentDetails": {
+    "duration": "PT1H1M12S",
+    "dimension": "2d",
+    "definition": "hd",
+    "caption": "false",
+    "licensedContent": false,
+    "projection": "rectangular"
+   },
+   "statistics": {
+    "viewCount": "44885",
+    "likeCount": "2260",
+    "dislikeCount": "12",
+    "favoriteCount": "0",
+    "commentCount": "118"
+   }
+  }
+ ]
+}

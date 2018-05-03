@@ -1,0 +1,36 @@
+{
+ "kind": "youtube#searchListResponse",
+ "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/Jr6w_sfN5k4K95-zXySf_22OO2A\"",
+ "nextPageToken": "CAMQAA",
+ "regionCode": "JP",
+ "pageInfo": {
+  "totalResults": 505,
+  "resultsPerPage": 3
+ },
+ "items": [
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/YkySZhOLasOhJcrwCAdDFPpL9Hg\"",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "lhu8HWc9TlA"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/ZmkzHRUP55FNaiMJfRBY_qXYkFI\"",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "mc7GUZinTD0"
+   }
+  },
+  {
+   "kind": "youtube#searchResult",
+   "etag": "\"gtflnPEZZ5BwUCsNe9swymvmRmg/l5ijoZ9cwAIHh2LAAt4KOu9YKF8\"",
+   "id": {
+    "kind": "youtube#video",
+    "videoId": "6qptaGpilE0"
+   }
+  }
+ ]
+}
