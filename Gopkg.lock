@@ -13,9 +13,21 @@
   packages = ["context"]
   revision = "640f4622ab692b87c2f3a94265e6f579fe38263d"
 
+[[projects]]
+  branch = "v2"
+  name = "gopkg.in/mgo.v2"
+  packages = [
+    ".",
+    "bson",
+    "internal/json",
+    "internal/sasl",
+    "internal/scram"
+  ]
+  revision = "3f83fa5005286a7fe593b055f0d7771a7dce4655"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "926eb2ebfa68b0b0c883ec5a7f201ddd3c013e7e16ba99fc3710d9ed1a57e1b3"
+  inputs-digest = "6a3d38001aa2674d0e844f580485a08d75c7bcaf21fd127d603062d6edd27f7c"
   solver-name = "gps-cdcl"
   solver-version = 1

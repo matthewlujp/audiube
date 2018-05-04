@@ -1,0 +1,31 @@
+version: '3'
+services:
+    audiube:
+        build: .
+        container_name: "audiube"
+        environment:
+            - api_key=${API_KEY}
+        volumes:
+            - ./static/streams:/app/static/streams
+        ports:
+            - 5001:5001
+        depends_on:
+            - mongodb
+        environment:
+            - MONGO_URI=mongodb://audiubedb
+        networks:
+            - audiubenet
+    mongodb:
+        image: mongo:3.6.4
+        container_name: "mongodb"
+        volumes:
+          - ./db:/data/db
+        ports:
+            - 27017:27017
+        networks:
+            audiubenet:
+                aliases:
+                    - "audiubedb"
+networks:
+    audiubenet:
+        driver: bridge

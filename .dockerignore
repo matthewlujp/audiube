@@ -1,0 +1,11 @@
+.envrc
+envrc_sample
+
+docker-compose.yml
+
+src/youtube_data_v3/mocks
+vendor
+
+**/*_test.go
+
+server
