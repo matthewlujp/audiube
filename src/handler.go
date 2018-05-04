@@ -8,9 +8,15 @@ import (
 	"os"
 	"path"
 	"strings"
+	"time"
 
 	youtube "github.com/matthewlujp/audiube/src/youtube_data_v3"
-	"gopkg.in/mgo.v2/bson"
+	mgo "gopkg.in/mgo.v2"
+)
+
+const (
+	segmentListFilename = "audio.m3u8"
+	segmentFilename     = "segment%04d.ts"
 )
 
 // handleWithLogging wraps a handler
@@ -51,6 +57,7 @@ func handleWithContentTypeJSON(f http.HandlerFunc) http.HandlerFunc {
 // GET /static/hoge
 // Desc: static files such as css and js are placed under static directory and obtained through this handler
 // staticFileHandler provides filename under static directory for /filename request
+// TODO: make a wrapper to alter segment list files
 func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 	requestPath, errParse := parsePath(r.RequestURI)
 	if errParse != nil {
@@ -287,11 +294,17 @@ func videoGetHandler(w http.ResponseWriter, r *http.Request) {
 // }
 //
 // streamHandler respond to a stream request, i.e. request for HLS segment file
-// 4 cases
+// URL is something like "static/streams/:videoID/audio.m3u8", since the program servers contents under static directory if requested.
+// Embedding this url into video tag works.
+// 3 cases to deal with,
 //   * segment file url of a given video id exists in db -> respond with the url
 //   * segment file url not in db but has already been created in the streams folder -> build url and respond with it, as well as registering it on db
 //   * segment file has not been created -> download video, convert it using FFmpeg to HLS, respond with the url as soon as segment file (.m3u8) is created, and register the url on db
+// This handler is supposed to be wraped by withVars and withDB.
 func streamsHandler(w http.ResponseWriter, r *http.Request) {
+	// TODO: path parsing should be done by a wrapper
+	// TODO: graceful shutdown
+	// TODO: stop and delete unsuccessful vedeo download
 	// get video id from request path
 	pp, errParse := parsePath(r.URL.String())
 	if errParse != nil {
@@ -303,40 +316,69 @@ func streamsHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if fileURL := getSegmentListFileURLFromDB(pp.id); fileURL != "" {
-		// segment file exists and respond to the request with it
-		result := struct {
-			ID      string `json:"id"`
-			FileURL string `json:"segment_list_file_url"`
-		}{ID: pp.id, FileURL: fileURL}
-		json.NewEncoder(w).Encode(result)
+	// define response body json format
+	// {
+	// 	id: %s,
+	// 	segment_list_file_url: %s
+	// }
+	resultFormat := ("{\"id\":\"%s\",\"segment_list_file_url\":\"%s\"}")
+
+	// segment file exists and respond to the request with it
+	if dbSess, ok := vManager.get(r, dbSessionKey).(*mgo.Session); ok {
+		// got session
+		if fileURL, err := getSegmentListFileURLFromDB(dbSess, pp.id); err == nil {
+			// got url for segment list file
+			if _, err := io.Copy(w, strings.NewReader(fmt.Sprintf(resultFormat, pp.id, fileURL))); err == nil {
+				// writing done
+				w.WriteHeader(http.StatusOK)
+				return
+			}
+			// failed writing
+			http.Error(
+				w,
+				fmt.Sprintf("error while writing url into response writer, %s", err),
+				http.StatusInternalServerError,
+			)
+			return
+		}
+	}
+
+	// search in static/streams directory
+	// segment list file and video segments are stored in a directory whose name is a video id
+	segmentListFilePath := path.Join(hlsSaveDirPath(pp.id), segmentListFilename)
+	if _, err := os.Stat(segmentListFilePath); !os.IsNotExist(err) {
+		// segment list file for videoID exists
+		// respond with the url
+		if _, err := io.Copy(w, strings.NewReader(fmt.Sprintf(resultFormat, pp.id, segmentListFilePath))); err != nil {
+			http.Error(w, "error while writing url into response writer, "+err.Error(), http.StatusInternalServerError)
+		}
 		w.WriteHeader(http.StatusOK)
+
+		// register the url on db
+		if sess, ok := vManager.get(r, dbSessionKey).(*mgo.Session); ok {
+			if err := setSegmentListFileURL(sess, pp.id, segmentListFilePath); err != nil {
+				logger.Printf("error while registering new segment list file url on db, %s", err)
+			}
+		}
 		return
 	}
 
-	io.Copy(w, strings.NewReader(fmt.Sprintf("{\"id\":\"%s\",\"message\":\"video id not found...\"", pp.id)))
-	w.WriteHeader(http.StatusBadRequest)
-}
-
-// getSegmentListFileURLFromDB looks for segment file url in db.
-// In either case where no entry is found or an error occurs, empty string is returned
-func getSegmentListFileURLFromDB(videoID string) string {
-	c, errCollection := getCollection(audioCollectionName)
-	if errCollection != nil {
-		logger.Printf("error occurred while connecting to db, %s", errCollection)
-		return ""
+	// download video, transcode with FFmpeg, and respond with a newly created segment list file url
+	// download: use chunk fetch (goroutine)
+	// FFmpeg: successively start transcoding from fetch data (goroutine)
+	// respond: receive message from a goroutine where transcoding runs, respond to request and register segment list file url to db
+	var errFetch error
+	segmentListFilePath, errFetch = fetchVideAndBuildHLS(pp.id) // errorChannel notify result of transcode conducted in another goroutine
+	if errFetch != nil {
+		http.Error(w, errFetch.Error(), http.StatusInternalServerError)
 	}
 
-	// search in a collection of db
-	var result videoDoc
-	if err := c.Find(bson.M{"videoid": videoID, "segmentfileurl": bson.M{"$exists": true}}).One(&result); err != nil {
-		logger.Printf("error occurred while searching segment list file url in db, %s", err)
-		return ""
+	// respond to a request after a while for segment list file creation
+	time.Sleep(50 * time.Microsecond)
+	if _, err := io.Copy(w, strings.NewReader(fmt.Sprintf(resultFormat, pp.id, segmentListFilePath))); err != nil {
+		http.Error(w, "failed to write result into RewponseWriter "+err.Error(), http.StatusInternalServerError)
 	}
-	if result.SegmentFileURL == "" { // url doesn't exit in db
-		return ""
-	}
-	return result.SegmentFileURL
+	w.WriteHeader(http.StatusOK) // registration on DB will be done in next call for this vide id
 }
 
 // ====================================================================================================

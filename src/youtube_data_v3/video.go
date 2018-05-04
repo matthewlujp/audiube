@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// Video holds basic info of a video
 type Video struct {
 	ID          string        `json:"id"`
 	Title       string        `json:"title"`
@@ -13,6 +14,7 @@ type Video struct {
 	Thumbnails  Thumbnails    `json:"thumbnail"`
 }
 
+// Thumbnails holds info of several thumbnail images with different sizes
 type Thumbnails struct {
 	Default  ThumbnailDetail `json:"default"`
 	Medium   ThumbnailDetail `json:"medium"`
@@ -21,6 +23,7 @@ type Thumbnails struct {
 	Maxres   ThumbnailDetail `json:"maxres"`
 }
 
+// ThumbnailDetail holds url and size of a thumbnail image
 type ThumbnailDetail struct {
 	URL    string `json:"url"`
 	Width  int    `json:"width"`
