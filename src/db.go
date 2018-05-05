@@ -96,7 +96,10 @@ func setSegmentListFileURL(sess *mgo.Session, videoID, fileURL string) error {
 	}
 
 	// no document found for videoID -> insert
-	return c.Insert(&videoDoc{VideoID: videoID, SegmentFileURL: fileURL})
+	return c.Insert(&struct {
+		VideoID        string
+		SegmentFileURL string
+	}{VideoID: videoID, SegmentFileURL: fileURL})
 }
 
 // withDB create a db session and register to a variable manager

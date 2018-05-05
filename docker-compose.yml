@@ -1,10 +1,11 @@
 version: '3'
 services:
     audiube:
-        build: .
+        build:
+            context: .
+            args:
+                api_key: ${API_KEY}
         container_name: "audiube"
-        environment:
-            - api_key=${API_KEY}
         volumes:
             - ./static/streams:/app/static/streams
         ports:

@@ -13,6 +13,6 @@ ENV API_KEY $api_key
 RUN apk add --no-cache openssh
 WORKDIR /app
 COPY ./static ./static
-COPY ./run.sh .
+COPY ./run.sh ./run.sh
 COPY --from=builder /go/src/github.com/matthewlujp/audiube/main .
 ENTRYPOINT ["./run.sh"]
