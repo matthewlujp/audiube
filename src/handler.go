@@ -1,12 +1,14 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
 	"os"
 	"path"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -72,18 +74,44 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, errParse.Error(), http.StatusInternalServerError)
 	}
 	filePath := path.Join(*staticDirectory, requestPath.id)
-	logger.Print("static file path", filePath)
+	logger.Print("static file path ", filePath)
+
 	f, errOpen := os.Open(filePath)
 	if errOpen != nil {
 		http.Error(w, errOpen.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	w.Header().Set("Content-Type", name2ContentType(requestPath.id))
-	if _, err := io.Copy(w, f); err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
+	if filepath.Ext(filePath) == ".m3u8" {
+		// if a request is for segment list file (.m3u8), insert "#EXT-X-START:0\n"
+		w.Header().Set("Content-Type", "application/x-mpegurl")
+
+		buf := new(bytes.Buffer)
+		if _, err := buf.ReadFrom(f); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		// insert "#EXT-X-START:0\n" after "#EXTM3U\n"
+		originalList := buf.Bytes()
+		startInstruction := []byte("#EXT-X-START:0\n")
+		insertedList := make([]byte, 0, len(originalList)+len(startInstruction))
+		insertedList = append(insertedList, originalList[:8]...) // len("#EXTM3U\n") = 8
+		insertedList = append(insertedList, startInstruction...)
+		insertedList = append(insertedList, originalList[8:]...)
+
+		if _, err := f.Write(insertedList); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	} else {
+		w.Header().Set("Content-Type", name2ContentType(requestPath.id))
+		if _, err := io.Copy(w, f); err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
 	}
+
 	w.WriteHeader(http.StatusOK)
 }
 
