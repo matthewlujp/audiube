@@ -105,7 +105,7 @@ func selectStream(videoID string) (*gotube.Stream, error) {
 			break
 		}
 
-		if r, err := resCmp(stream, candidateStream); err == nil && r < 0 {
+		if r, err := compareStreamResolution(stream, candidateStream); err == nil && r < 0 {
 			// change to smaller stream only if compare succeeds
 			candidateStream = stream
 		}
@@ -119,11 +119,11 @@ func resolution2Numeric(res string) (int, error) {
 	return strconv.Atoi(strings.TrimSuffix(res, "p"))
 }
 
-// resCmp returns one of  -1, 0, or 1
+// compareStreamResolution returns one of  -1, 0, or 1
 //   -1 if stream1.Resolution < stream2.Resolution
 //   0 if stream1.Resolution == stream2.Resolution
 //   1 if stream1.Resolution > stream2.Resolution
-func resCmp(stream1, stream2 *gotube.Stream) (int, error) {
+func compareStreamResolution(stream1, stream2 *gotube.Stream) (int, error) {
 	r1, err1 := resolution2Numeric(stream1.Resolution)
 	if err1 != nil {
 		return 0, err1
