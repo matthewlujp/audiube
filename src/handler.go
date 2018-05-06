@@ -88,7 +88,7 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 
 		buf := new(bytes.Buffer)
 		if _, err := buf.ReadFrom(f); err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+			http.Error(w, "failed reading to []byte, "+err.Error(), http.StatusInternalServerError)
 			return
 		}
 
@@ -100,8 +100,8 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 		insertedList = append(insertedList, startInstruction...)
 		insertedList = append(insertedList, originalList[8:]...)
 
-		if _, err := f.Write(insertedList); err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
+		if _, err := w.Write(insertedList); err != nil {
+			http.Error(w, "failed writing to ResponseWriter, "+err.Error(), http.StatusInternalServerError)
 			return
 		}
 	} else {
