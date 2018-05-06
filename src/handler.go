@@ -27,6 +27,14 @@ func handleWithLogging(f http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
+// allow request from other domain (front view program)
+func handleWithCrossOriginRequest(f http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		f(w, r)
+	}
+}
+
 // GET /
 // index.html <- single page driven by React
 // indexHandler provides index page
@@ -50,7 +58,6 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 func handleWithContentTypeJSON(f http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		w.Header().Set("Access-Control-Allow-Origin", "*")
 		f(w, r)
 	}
 }
