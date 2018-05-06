@@ -81,13 +81,15 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, errOpen.Error(), http.StatusInternalServerError)
 		return
 	}
+	defer f.Close()
+
+	w.Header().Set("Content-Type", name2ContentType(requestPath.id))
 
 	if filepath.Ext(filePath) == ".m3u8" {
 		// if a request is for segment list file (.m3u8), insert "#EXT-X-START:0\n"
-		w.Header().Set("Content-Type", "application/x-mpegurl")
-
 		buf := new(bytes.Buffer)
 		if _, err := buf.ReadFrom(f); err != nil {
+			logger.Print("failed reading to []byte, " + err.Error())
 			http.Error(w, "failed reading to []byte, "+err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -101,11 +103,11 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 		insertedList = append(insertedList, originalList[8:]...)
 
 		if _, err := w.Write(insertedList); err != nil {
+			logger.Print("failed writing to ResponseWriter, " + err.Error())
 			http.Error(w, "failed writing to ResponseWriter, "+err.Error(), http.StatusInternalServerError)
 			return
 		}
 	} else {
-		w.Header().Set("Content-Type", name2ContentType(requestPath.id))
 		if _, err := io.Copy(w, f); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return

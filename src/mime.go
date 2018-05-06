@@ -18,6 +18,8 @@ func name2ContentType(filename string) string {
 			return "text/html"
 		case "css":
 			return "text/css"
+		case "m3u8":
+			return "application/x-mpegurl"
 		default:
 			return "text/plain; charset=utf-8"
 		}
