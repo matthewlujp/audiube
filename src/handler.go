@@ -89,7 +89,6 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 		// if a request is for segment list file (.m3u8), insert "#EXT-X-START:0\n"
 		buf := new(bytes.Buffer)
 		if _, err := buf.ReadFrom(f); err != nil {
-			logger.Print("failed reading to []byte, " + err.Error())
 			http.Error(w, "failed reading to []byte, "+err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -103,7 +102,6 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 		insertedList = append(insertedList, originalList[8:]...)
 
 		if _, err := w.Write(insertedList); err != nil {
-			logger.Print("failed writing to ResponseWriter, " + err.Error())
 			http.Error(w, "failed writing to ResponseWriter, "+err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -138,7 +136,7 @@ func videosHandler(w http.ResponseWriter, r *http.Request) {
 	case pp.params != nil && pp.params.Get("relatedToVideoId") != "": // /videos?relatedId=foo ->  search for related videos to id
 		relatedSearchHandler(w, r)
 	default:
-		http.Error(w, fmt.Sprintf("unsupported request %s", r.URL.RawPath), http.StatusBadRequest)
+		http.Error(w, fmt.Sprintf("unsupported request %s", r.URL), http.StatusBadRequest)
 	}
 }
 
