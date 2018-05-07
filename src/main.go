@@ -39,9 +39,9 @@ func main() {
 	}
 
 	http.HandleFunc("/", handleWithLogging(indexHandler))
-	http.HandleFunc("/static/", handleWithLogging(handleWithCrossOriginRequest(staticFileHandler)))
-	http.HandleFunc("/videos/", handleWithLogging(handleWithCrossOriginRequest(handleWithContentTypeJSON(videosHandler))))
-	http.HandleFunc("/streams/", handleWithLogging(handleWithCrossOriginRequest(handleWithContentTypeJSON(withVars(withDB(streamsHandler))))))
+	http.HandleFunc("/static/", handleWithLogging(allowCORS(staticFileHandler)))
+	http.HandleFunc("/videos/", handleWithLogging(allowCORS(setContentTypeJSON(videosHandler))))
+	http.HandleFunc("/streams/", handleWithLogging(allowCORS(setContentTypeJSON(withVars(withDB(streamsHandler))))))
 
 	s := &http.Server{
 		Addr:     fmt.Sprintf(":%d", *serverPort),
