@@ -133,9 +133,9 @@ func videosHandler(w http.ResponseWriter, r *http.Request) {
 	switch {
 	case pp.id != "": // /videos/id -> get info of video with id
 		videoGetHandler(w, r)
-	case pp.params.Get("q") != "": // /videos?q=hoge -> key words search
+	case pp.params != nil && pp.params.Get("q") != "": // /videos?q=hoge -> key words search
 		searchHandler(w, r)
-	case pp.params.Get("relatedToVideoId") != "": // /videos?relatedId=foo ->  search for related videos to id
+	case pp.params != nil && pp.params.Get("relatedToVideoId") != "": // /videos?relatedId=foo ->  search for related videos to id
 		relatedSearchHandler(w, r)
 	default:
 		http.Error(w, fmt.Sprintf("unsupported request %s", r.URL.RawPath), http.StatusBadRequest)
